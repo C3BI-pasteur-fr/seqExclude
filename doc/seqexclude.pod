@@ -1,0 +1,55 @@
+=pod
+
+=head1 NAME
+
+=over 4
+
+=item B<seqexclude> - fasta sequence filter based on sequence length.
+
+=back
+
+=head1 SYNOPSIS
+
+=over 4
+
+=item B<tseqexclude> [options] E<lt>F<seq file>E<gt> ...
+
+=back
+
+=head1 OPTIONS
+
+Following command line options are allowed:
+
+=over 4
+
+=item -h
+
+Usage display.
+
+=item -l F<value>
+
+Use F<value> as minimal size in base to consider. Default 0.
+
+=item -o F<file>
+
+Place the output into F<file>. Default stdout.
+
+=back
+
+=head1 FORMAT
+
+B<seqexclude> only handles fasta sequence format as input.
+
+=head1 DESCRIPTION
+
+B<seqexclude> is a program to filter fasta formated sequences from file,
+based on their size.
+
+Each sequence from input file is processed, size is compared to the size given in argument to option B<-l>. each sequence which size E<gt> size is displayed.
+all other sequence arre discarded.
+
+=head1 AUTHORS
+
+Eric Deveaud E<lt>edeveaud@pasteur.frE<gt>, Institut Pasteur
+
+=cut
